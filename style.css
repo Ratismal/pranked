@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Lobster&display=swap');
+
+html,
+body,
+#canvas {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+h1, h2 {
+  display: block;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  margin: 0 0 -20px;
+}
+
+h1 {
+  font-family: 'Fascinate Inline', cursive;
+  font-size: 70px;
+  margin: 0;
+}
+
+body {
+  background-image: url(rick.gif);
+}
+
+#canvas {
+  background-image: url(rick.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 2rem;
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  transform: rotateZ(-10deg) scale(1.5);
+}
+
+.snoop-container {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  bottom: -100px;
+  right: -100px;
+}
+
+.snoop {
+  display: inline-block;
+  width: 234px;
+  height: 480px;
+  margin-left: -100px;
+  background-image: url(snoop.gif);
+}
+
+.glitch {
+  /* animation: glitch-skew 4s cubic-bezier(.25, .46, .45, .94) 4s infinite; */
+  position: relative;
+  transform-origin: center top;
+  z-index: 1000000;
+
+}
+
+.glitch > div {
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  transform-origin: center center;
+  width: 100%;
+}
+
+.glitch .red {
+  animation: glitch 300ms cubic-bezier(.25, .46, .45, .94) infinite;
+  color: red;
+}
+.glitch .green {
+  animation: glitch 300ms cubic-bezier(.25, .46, .45, .94) 100ms infinite;
+  color: #00FF0B;
+}
+.glitch .blue {
+  animation: glitch 300ms cubic-bezier(.25, .46, .45, .94) infinite reverse;
+  color: blue;
+}
+.glitch .main {
+  color: white;
+}
+
+.fishing {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.brain {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+.cat {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  display: flex;
+}
+.virus {
+  position: absolute;
+  top: 22rem;
+  left: 5rem;
+}
+.cat img {
+  margin-right: -100px;
+}
+.links {
+  display: block;
+  position: absolute;
+  top: 40%;
+  width: 100vw;
+}
+
+.links img {
+  display: block;
+  margin: 5px auto;
+}
+
+.airhorn {
+  background-image: url(airhorn.png);
+  width: 304px;
+  height: 382px;
+  animation: airhorn 200ms infinite;
+  display: none;
+  position: absolute;
+}
+
+.visible {
+  display: block !important;
+}
+
+
+@keyframes glitch {
+  0% {
+      transform: translate(0);
+  }
+  20% {
+      transform: translate(-8px, 8px);
+  }
+  40% {
+      transform: translate(-8px, -8px);
+  }
+  60% {
+      transform: translate(8px, 8px);
+  }
+  80% {
+      transform: translate(8px, -8px);
+  }
+  100% {
+      transform: translate(0);
+  }
+
+}
+
+@keyframes glitch-skew {
+  0% {
+      transform: skew(0deg, 0deg);
+  }
+  48% {
+      transform: skew(0deg, 0deg);
+      filter: blur(0);
+  }
+  50% {
+      transform: skew(-20deg, 0deg);
+      filter: blur(4px);
+  }
+  52% {
+      transform: skew(20deg, 0deg);
+  }
+  54% {
+      transform: skew(0deg, 0deg);
+      filter: blur(0);
+  }
+  100% {
+      transform: skew(0deg, 0deg);
+  }
+
+}
+
+@keyframes airhorn {
+  0% {
+    transform: rotateZ(-5deg);
+  }
+  49% {
+    transform: rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+  99% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(-5deg);
+  }
+}
