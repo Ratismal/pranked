@@ -31,7 +31,13 @@ keep smiling! :)
  -->
 
 <body>
-  <script src='pranked.js'></script>
+  <script>
+  function loadAudio() {
+    // wow
+    const audio = document.getElementById('audio');
+    audio.play();
+  };
+  </script>
 
   <div id='canvas'>
     <header class='glitch'>
@@ -102,6 +108,8 @@ keep smiling! :)
   <audio controls style='display:none' id='horn3'>
     <source src='horn.mp3' type='audio/mpeg'>
   </audio>
+  <script src='pranked.js'></script>
+
 </body>
 
 </html>
