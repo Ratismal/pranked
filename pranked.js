@@ -3,9 +3,11 @@ function randInt(max) {
 }
 
 void function loadAudio() {
-  // wow
-  const audio = document.getElementById('audio');
-  audio.play();
+  setTimeout(() => {
+    // wow
+    const audio = document.getElementById('audio');
+    audio.play();
+  }, 500);
 }();
 
 void function loadAirhorn() {
