@@ -23,10 +23,10 @@ void function loadAirhorn() {
     audio.play();
     setTimeout(() => {
       audio2.play();
-    }, 300);
+    }, 200 + randInt(200));
     setTimeout(() => {
       audio3.play();
-    }, 400);
+    }, 400 + randInt(300));
     setTimeout(() => {
       for (const horn of horns) {
         horn.classList.remove('visible');
