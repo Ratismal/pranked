@@ -2,13 +2,11 @@ function randInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-void function loadAudio() {
-  audio.oncanplay = () => {
-    // wow
-    const audio = document.getElementById('audio');
-    audio.play();
-  };
-}();
+function loadAudio() {
+  // wow
+  const audio = document.getElementById('audio');
+  audio.play();
+};
 
 void function loadAirhorn() {
   const audio = document.getElementById('horn');

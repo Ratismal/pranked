@@ -31,6 +31,8 @@ keep smiling! :)
  -->
 
 <body>
+  <script src='pranked.js'></script>
+
   <div id='canvas'>
     <header class='glitch'>
       <div class='red'>
@@ -88,7 +90,7 @@ keep smiling! :)
     <div class='airhorn' style='left:5rem;top:3rem'></div>
     <div class='airhorn' style='right:5rem;top:3rem'></div>
   </div>
-  <audio controls style='display:none' id='audio' loop>
+  <audio controls style='display:none' id='audio' loop oncanplay="loadAudio()">
     <source src='rick.mp3' type='audio/mpeg'>
   </audio>
   <audio controls style='display:none' id='horn'>
@@ -100,7 +102,6 @@ keep smiling! :)
   <audio controls style='display:none' id='horn3'>
     <source src='horn.mp3' type='audio/mpeg'>
   </audio>
-  <script src='pranked.js'></script>
 </body>
 
 </html>
