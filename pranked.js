@@ -10,7 +10,7 @@ function loadAudio() {
 
 void function playAudio() {
   setTimeout(loadAudio, 1000);
-}
+}();
 
 void function loadAirhorn() {
   const audio = document.getElementById('horn');
