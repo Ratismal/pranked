@@ -2,14 +2,15 @@ function randInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function loadAudio() {
+void function loadAudio() {
   // wow
   const audio = document.getElementById('audio');
-  audio.play();
-};
-
-void function playAudio() {
-  setTimeout(loadAudio, 1000);
+  function play() {
+    audio.play().catch(err => {
+      setTimeout(play, 100);
+    })
+  }
+  play();
 }();
 
 void function loadAirhorn() {
